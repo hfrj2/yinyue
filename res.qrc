@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icon/list.png</file>
+        <file>icon/mode.png</file>
+        <file>icon/next.png</file>
+        <file>icon/play.png</file>
+        <file>icon/prev.png</file>
+        <file>image/12.png</file>
+        <file>image/34.png</file>
+        <file>musicSet/lironghao_lover.mp3</file>
+        <file>musicSet/GEM_ONLY.mp3</file>
+        <file>musicSet/lover - lironghao.lrc</file>
+        <file>musicSet/ONLY- G.E.M.lrc</file>
+        <file>icon/pause.png</file>
+    </qresource>
+</RCC>

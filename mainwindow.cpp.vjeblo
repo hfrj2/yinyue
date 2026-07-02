@@ -1,0 +1,64 @@
+#include "mainwindow.h"
+#include "./ui_mainwindow.h"
+#include <QIcon>
+#include <QPixmap>
+#include <QPalette>
+
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+
+    setWindowTitle("朝琴音乐播放器");
+
+    setBackGround(":/image/34.png");
+
+    setFixedSize(1020,720);
+
+    initButton();
+}
+
+
+
+void MainWindow::setButtonStyle(QPushButton * button,const QString & filename)
+{
+    button->setFixedSize(40,40);
+
+    button->setIcon(QIcon(filename));
+
+    button->setIconSize(QSize(ui->prevBtn->width(),ui->prevBtn->height()));
+
+    button->setStyleSheet("background-color:transparent");
+}
+
+void MainWindow::initButton()
+{
+    setButtonStyle(ui->prevBtn,":/icon/prev.png");
+    setButtonStyle(ui->playBtn,":/icon/play.png");
+    setButtonStyle(ui->nextBtn,":/icon/next.png");
+    setButtonStyle(ui->modeBtn,":/icon/mode.png");
+    setButtonStyle(ui->listBtn,":/icon/list.png");
+}
+
+void MainWindow::setBackGround(const QString & filename)
+{
+    QPixmap pixmap(filename);
+
+    QSize windowSize = this->size();
+
+    QPixmap scalPixmap = pixmap.scaled(windowSize,Qt::IgnoreAspectRatio,Qt::SmoothTransformation);
+
+    QPalette palette = this->palette();
+    palette.setBrush(QPalette::Window,QBrush(scalPixmap));
+
+
+    this->setPalette(palette);
+}
+
+
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
