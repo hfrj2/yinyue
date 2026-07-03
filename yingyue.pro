@@ -24,6 +24,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
+    app.rc \
     icon/mode.png \
     icon/next.png \
     icon/play.png \
@@ -31,3 +32,11 @@ DISTFILES += \
 
 RESOURCES += \
     res.qrc
+
+RC_FILE = app.rc
+
+# 处理编码问题 - 正确方式
+win32 {
+    # 编译器选项（不是链接器选项）
+    QMAKE_CXXFLAGS += /utf-8
+}

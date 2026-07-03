@@ -9,8 +9,9 @@
         <file>image/34.png</file>
         <file>musicSet/lironghao_lover.mp3</file>
         <file>musicSet/GEM_ONLY.mp3</file>
-        <file>musicSet/lover - lironghao.lrc</file>
-        <file>musicSet/ONLY- G.E.M.lrc</file>
         <file>icon/pause.png</file>
+        <file>icon/app.ico</file>
+        <file>musicSet/GEM_ONLY.lrc</file>
+        <file>musicSet/lironghao_lover.lrc</file>
     </qresource>
 </RCC>
